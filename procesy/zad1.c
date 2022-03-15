@@ -12,6 +12,8 @@ void wypisz_identyfikatory(){
     printf("%d\n", getpgid(0));
 }
 
+//https://www.section.io/engineering-education/fork-in-c-programming-language/
+
 int main()
 {
    // wypisz_identyfikatory();
@@ -26,7 +28,7 @@ int main()
             wypisz_identyfikatory();
             default:
             // akcja dla procesu macierzystego, np. wywolanie funkcji wait
-            wait();
+            wait(NULL);
             wypisz_identyfikatory();
             };
     }
